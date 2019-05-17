@@ -1,0 +1,126 @@
+.info
+	padding: 55px 0 26px
+	+r(1219)
+		padding-top: 30px
+		padding-bottom: 10px
+	&-content
+		display: flex
+		justify-content: center
+		+r(767)
+			flex-direction: column
+			align-items: center
+	&-pack
+		position: relative
+		+r(767)
+			max-width: 250px
+		&:before
+			content: ''
+			position: absolute
+			width: 99px
+			height: 108px
+			background: url(../img/rhomb.png) no-repeat center
+			background-size: contain
+			z-index: -1
+			right: -54px
+			top: 32px
+			+r(1023)
+				display: none
+		&:after
+			content: ''
+			position: absolute
+			background: url(../img/rhomb.png) no-repeat center
+			background-size: contain
+			right: -70px
+			top: 86px
+			width: 57px
+			height: 62px
+			+r(1023)
+				display: none
+		&__bg
+			position: absolute
+			width: 100%
+			height: 100%
+			+r(1023)
+				display: none
+			&:before
+				content: ''
+				position: absolute
+				left: -67px
+				top: 87px
+				background: url(../img/rhomb.png) no-repeat center;
+				background-size: contain
+				z-index: -1
+				width: 198px
+				height: 215px
+	&-box
+		max-width: 660px
+		margin-left: 100px
+		padding-top: 37px
+		+r(1219)
+			margin-left: 80px
+			padding-top: 32px
+		+r(1023)
+			margin-left: 20px
+			padding-top: 0px
+		+r(767)
+			margin-left: 0
+		&__title
+			text-align: left
+			+r(767)
+				text-align: center
+			span
+				img
+					+r(1219)
+						width: 173px
+					+r(1023)
+						width: 158px
+					+r(767)
+						width: 137px
+		&__subtitle
+			margin-top: 28px
+			color: #222222
+			font-family: Roboto
+			font-size: 20px
+			font-weight: 500
+			line-height: 28px
+			+r(1219)
+				margin-top: 22px
+				font-size: 19px
+				line-height: 27px
+			+r(1023)
+				margin-top: 15px
+				font-size: 18px
+				line-height: normal
+			+r(767)
+				text-align: center
+				margin-top: 5px
+		&__text
+			margin-top: 8px
+			color: #444444
+			font-family: Roboto
+			font-size: 19px
+			font-weight: 400
+			line-height: 28px
+			+r(1219)
+				margin-top: 8px
+				font-size: 18px
+				line-height: 27px
+			+r(1023)
+				font-size: 17px
+				line-height: normal
+				margin-top: 5px
+			+r(767)
+				margin-top: 0
+				text-align: center
+		&__btn
+			margin-top: 37px
+			max-width: 300px
+			height: 65px
+			+r(1219)
+				margin-top: 30px
+			+r(1023)
+				margin-top: 15px
+				height: 50px
+			+r(767)
+				margin-right: auto
+				margin-left: auto
