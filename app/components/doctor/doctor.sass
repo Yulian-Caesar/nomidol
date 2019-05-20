@@ -1,0 +1,132 @@
+.doctor
+	padding: 160px 0 120px
+	position: relative
+	+r(1219)
+		padding: 105px 0 70px
+	&-img
+		position: absolute
+		bottom: -89px
+		left: 50%
+		transform: translateX(-58.8%)
+		width: 1063px
+		height: 704px
+		background: url(../img/doctor.png) no-repeat center
+		z-index: 4
+		+r(1219)
+			background-size: 100%
+			width: 850px
+			transform: translateX(-63.8%)
+			height: 647px
+		+r(1023)
+			display: none
+	&-content
+		display: block
+		max-width: 570px
+		margin-left: auto
+		position: relative
+		z-index: 10
+		+r(1219)
+			width: 510px
+		+r(1023)
+			width: 100%
+			max-width: 100%
+			overflow: auto
+	&__name
+		color: #000000
+		font-family: Roboto
+		font-size: 25px
+		font-weight: 700
+		line-height: 1
+		+r(1219)
+			font-size: 24px
+		+r(1023)
+			text-align: center
+			font-size: 22px
+		+r(639)
+			font-size: 20px
+	&__prof
+		color: #444444
+		font-family: Roboto
+		font-size: 18px
+		font-weight: 400
+		line-height: 1
+		margin-top: 10px
+		position: relative
+		padding-bottom: 21px
+		+r(1219)
+			font-size: 17px
+			margin-top: 5px
+			padding-bottom: 15px
+		+r(1023)
+			font-size: 16px
+			margin-top: 3px
+			text-align: center
+		+r(639)
+			font-size: 15px
+		&:before
+			content: ''
+			position: absolute
+			bottom: 0
+			left: 0
+			width: 30px
+			height: 5px
+			background-color: #e9862c
+			+r(1023)
+				left: 50%
+				transform: translateX(-50%)
+	&__title
+		color: #000000
+		font-size: 36px
+		font-weight: 900
+		line-height: 36px
+		margin-top: 30px
+		+r(1219)
+			margin-top: 20px
+			font-size: 32px
+			line-height: 32px
+		+r(1023)
+			margin-top: 4px
+			font-size: 30px
+			line-height: normal
+			text-align: center
+			br
+				display: none
+		+r(767)
+			font-size: 26px
+		+r(639)
+			font-size: 22px
+			
+	&-box
+		margin-top: 23px
+		height: 335px
+		overflow: hidden
+		+r(1219)
+			margin-top: 15px
+			height: 320px
+		+r(1023)
+			height: 100%
+			margin-top: 8px
+	&__text
+		color: #444444
+		font-size: 18px
+		font-weight: 400
+		line-height: 26px
+		+r(1219)
+			line-height: 24px
+		+r(1023)
+			font-size: 17px
+			line-height: normal
+		+r(639)
+			font-size: 16px
+		b
+			font-weight: 500
+			color: #000
+		&:not(:last-child)
+			margin-bottom: 24px
+			+r(1219)
+				margin-bottom: 15px
+			+r(1023)
+				margin-bottom: 10px
+
+
+@import 'scroll'
