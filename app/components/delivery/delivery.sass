@@ -1,0 +1,103 @@
+.delivery
+	padding: 75px 0 30px
+	+r(1219)
+		padding: 50px 0 30px
+	+r(1023)
+		padding-top: 0 !important
+	&-content
+		display: flex
+		justify-content: center
+		margin-top: 80px
+		background: url(../img/order-line.png) no-repeat 50% 18%
+		+r(1219)
+			margin-top: 50px
+			background: url(../img/order-line.png) no-repeat 50% 25%
+		+r(1023)
+			margin-top: 20px
+			background: none
+		+r(639)
+			flex-wrap: wrap
+	&-box
+		width: 320px
+		+r(1219)
+			width: 280px
+		+r(1023)
+			width: 240px
+		+r(639)
+			width: 220px
+			margin-bottom: 40px
+		&:nth-child(2)
+			margin: 0 80px
+			margin-top: -30px
+			+r(1219)
+				margin: 0 30px
+				margin-top: -20px
+			+r(1023)
+				margin-top: 0
+				margin: 0 10px
+			+r(639)
+				margin-bottom: 40px
+		&__img
+			position: relative
+			display: flex
+			align-items: center
+			justify-content: center
+			img
+				+r(1023)
+					width: 180px
+			&:before
+				content: ''
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%) rotate(-12deg)
+				background: url(../img/rhomb.png) no-repeat center
+				background-size: contain
+				z-index: -1
+				width: 214px
+				height: 229px
+				background-size: contain
+				+r(1023)
+					width: 170px
+		&__title
+			color: #000000
+			font-size: 22px
+			font-weight: 500
+			line-height: normal
+			text-align: center
+			margin-top: 25px
+			padding-top: 15px
+			position: relative
+			+r(1219)
+				font-size: 21px
+				margin-top: 20px
+				padding-top: 10px
+			+r(1023)
+				font-size: 20px
+				margin-top: 15px
+				padding-top: 10px
+			&:before
+				content: ''
+				position: absolute
+				top: 0
+				left: 50%
+				transform: translateX(-50%)
+				width: 25px
+				height: 5px
+				background-color: #e9862c
+		&__text
+			text-align: center
+			color: #444444
+			font-size: 18px
+			font-weight: 400
+			line-height: 28px
+			margin-top: 10px
+			+r(1219)
+				margin-top: 5px
+				line-height: normal
+				font-size: 17px
+				br
+					display: none
+			+r(1023)
+				font-size: 16px
+				margin-top: 3px
