@@ -307,7 +307,9 @@
   .home-box {
     padding: 0;
   }
-
+	.home__form {
+		margin-bottom: 3px;
+  }
   .header {
     margin-bottom: 10px;
   }
@@ -355,7 +357,7 @@
 
 @media screen and (max-width: 767px){
   .home {
-    padding-bottom: 30px;
+		padding-bottom: 30px;
   }
 
   .header__item-box + .header__item-box {
@@ -425,7 +427,8 @@
   }
 
   .home .form {
-    margin: 0 auto;
+		margin: 0 auto;
+		margin-bottom: 4px;
   }
 
 }

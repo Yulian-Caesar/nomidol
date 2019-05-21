@@ -7,7 +7,12 @@
 	});
 })(jQuery);
 
-
+$('.reviews-content').on('afterChange', function(event, slick, currentSlide){
+	$(this).find('.slick-slide.content-plus').not('.slick-active').removeClass('content-plus');
+});
+$('.reviews-box__plus').on('click', function () {
+this.parentElement.parentElement.classList.toggle("content-plus");
+});
 
 $(".reviews-content").slick({
   infinite: true,
@@ -79,9 +84,4 @@ $(".reviews-content").slick({
   ]
 });
 
-$('.reviews-content').on('afterChange', function(event, slick, currentSlide){
-	$(this).find('.slick-slide.content-plus').not('.slick-active').removeClass('content-plus');
-});
-$('.reviews-box__plus').on('click', function () {
-this.parentElement.parentElement.classList.toggle("content-plus");
-});
+

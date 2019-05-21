@@ -3,7 +3,7 @@
 body {	
 	font-family: 'Roboto', sans-serif;
 	font-size: 14px;
-	overflow-x: hidden;
+	overflow: hidden;
 }
 html{
 	overflow-x: hidden;
@@ -16,7 +16,9 @@ img {
 svg {
 	overflow: hidden;
 }
-
+br{
+	line-height: 1;
+}
 .container {
 	width: 1220px;
 	margin: 0 auto;
@@ -529,3 +531,8 @@ svg {
 	}
 }
 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+	.slick-dots li.slick-active button{
+		height: 30px !important;
+	}
+}
