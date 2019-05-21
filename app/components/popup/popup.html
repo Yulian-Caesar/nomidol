@@ -1,0 +1,55 @@
+<div class="ever-popup-build">
+    <div class="my-popup" id="cloneThis">
+        <div class="popup-wrap">
+            <div class="popup-product">
+                <img src="img/product.png" alt="product">
+                <img class="popup-product__rhomb-big" src="img/rhomb.png" alt="">
+                <img class="popup-product__rhomb-normal" src="img/rhomb.png" alt="">
+                <img class="popup-product__rhomb-small" src="img/rhomb.png" alt="">
+            </div>
+            <div class="form popup__form">
+                <div class="form-header">
+                    <p class="form-title">
+                        Закажите сейчас
+                        <span class="form-title_orange">по Акции</span>
+                    </p>
+                    <div class="price">
+                        <div class="price-item price-old">
+                            <p class="price-title price-title_old">Старая цена:</p>
+                            <div class="price-content price-content_old">
+                                <span class="x_price_previous">918</span><span class="x_currency">грн</span>
+                            </div>
+                        </div>
+                        <div class="price-item price-new">
+                            <p class="price-title price-title_new">Ваша цена:</p>
+                            <div class="price-content price-content_new">
+                                <span class="x_price_current">459</span><span class="x_currency">грн</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="form__lastpack">Осталось упаковок со скидкой: <span class="lastpack">15</span></p>
+                </div>
+                <form action="/submit" method="post" class="x_order_form form-content">
+                    <div class="input-box input-box_name">
+                        <input class="form-field form-field_name" type="text" name="name" required=""
+                               autocomplete="name" placeholder="Моё имя">
+                    </div>
+                    <div class="input-box input-box_tel">
+                        <input class="form-field form-field_tel" type="tel" name="phone" required=""
+                               autocomplete="tel" placeholder="Мой телефон">
+                    </div>
+                    <button class="button form-button">
+                        <span class="button__text-1">Заказать</span>
+                        <span class="button__text-2">со скидкой</span>
+                    </button>
+                </form>
+                <div class="form-footer">
+                    <div class="form-footer__img">
+                        <img src="img/money.svg" alt="">
+                    </div>
+                    <p class="form-footer__text">Оплата после получения</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

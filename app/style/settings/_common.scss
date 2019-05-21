@@ -9,6 +9,7 @@ html{
 	overflow-x: hidden;
 }
 img {
+	display: block;
 	max-width: 100%;
 }
 
@@ -72,6 +73,10 @@ svg {
 	font-weight: 900;
 }
 
+.ib {
+	display: inline-block;
+}
+
 .text-nowrap {
 	white-space: nowrap;
 }
@@ -81,6 +86,11 @@ svg {
 	background: #fef3eb;
 }
 
+.section-color .container {
+	position: relative;
+	z-index: 2;
+}
+
 .section-color:before,
 .section-color:after {
 	content: "";
@@ -88,6 +98,7 @@ svg {
 	width: 648px;
 	height: 543px;
 	top: 50%;
+	z-index: 0;
 	background: url("../img/section-color.png") no-repeat center;
 	@include r(1023) {
 		display: none;
@@ -152,8 +163,9 @@ svg {
 	background: #fff;
 	box-shadow: 0 0 0 3px #fcb97e;
 	border-radius: 5px;
-	padding: 35px 20px 25px;
+	padding: 28px 20px 15px;
 }
+
 
 .form:before,
 .form:after{
@@ -173,10 +185,14 @@ svg {
 
 .form:after {
 	background: url("../img/form-arrow.png") no-repeat center;
-	top: 115px;
-	right: -25px;
-	width: 43px;
-	height: 229px;
+	top: 112px;
+	right: -35px;
+	width: 53px;
+	height: 293px;
+	@include r(1299) {
+		display: none;
+	}
+
 }
 
 .form-header {
@@ -187,7 +203,7 @@ svg {
 .form-title {
 	color: #000;
 	font-size: 24px;
-	line-height: 1.1;
+	line-height: 1;
 	font-weight: 500;
 	text-align: center;
 	margin-bottom: 15px;
@@ -201,7 +217,7 @@ svg {
 .price {
 	display: flex;
 	position: relative;
-	margin-bottom: 15px;
+	margin-bottom: 13px;
 }
 
 .price:before {
@@ -262,9 +278,6 @@ svg {
 	font-weight: 900;
 }
 
-.home__form .x_price_current {
-	font-size: 40px;
-}
 
 .x_price_previous {
 	position: relative;
@@ -298,32 +311,9 @@ svg {
 	line-height: 1;
 }
 
-.home__form .form-line {
-	position: relative;
-	display: block;
-	width: 100%;
-	height: 2px;
-	background: #d1d0d0;
-	margin-bottom: 12px;
-}
-
-.home__form .form-line:after {
-	content: "";
-	position: absolute;
-	background-color: #fff;
-	width: 15px;
-	height: 15px;
-	left: 50%;
-	top: -7px;
-	transform: rotate(45deg);
-	box-sizing: border-box;
-	border-bottom: 2px solid #d1d0d0;
-	border-right: 2px solid #d1d0d0;
-	margin-left: -7.5px;
-}
 
 .timer-box {
-	margin-bottom: 15px;
+	margin-bottom: 20px;
 }
 
 .timer-title {
@@ -376,7 +366,6 @@ svg {
 	cursor: pointer;
 	background-color: #a8c13f;
 	border-radius: 5px;
-	color: #fff;
 	box-shadow: 0 5px 0 0 #93b02e, 0px 18px 9px -8px rgba(147, 176, 46, 0.8);
 	outline: 0;
 	transition: .7s;
@@ -391,8 +380,8 @@ svg {
 	box-shadow: 0 5px 0 0 #93b02e, 0px 22px 9px -8px rgba(147, 176, 46, 0.8);
 }
 
-.home__form .button {
-	min-height: 60px;
+.form .button {
+	min-height: 65px;
 }
 
 .button__text-1, .button__text-2 {
@@ -409,7 +398,90 @@ svg {
 	font-size: 20px;
 	font-weight: 400;
 }
+
+.form__lastpack {
+	color: #000;
+	font-size: 16px;
+	line-height: 1.1;
+	font-weight: 500;
+	max-width: 150px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.lastpack {
+	color: #fb9a01;
+}
+
+.form-content {
+	padding-top: 15px;
+}
+
+.input-box {
+	position: relative;
+	margin-bottom: 15px;
+}
+
+.form-field {
+	width: 100%;
+	padding: 20px 25px 20px 55px;
+	border-radius: 5px;
+	height: 58px;
+	border: 1px solid #dedddd;
+	background-color: #ffffff;
+	color: #666;
+	font-size: 16px;
+	line-height: 1;
+	transition: .5s;
+}
+
+.form-field:hover,
+.form-field:active {
+	box-shadow: inset 0 0 8px 0 rgba(34,35,39,.3);
+}
+
+.input-box:after {
+	content: "";
+	position: absolute;
+	height: 24px;
+	left: 20px;
+	top: 50%;
+	transform: translate(0,-50%);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+}
+
+.input-box_name:after {
+	width: 21px;
+	background-image: url("../img/user.svg");
+}
+
+.input-box_tel:after {
+	width: 24px;
+	background-image: url("../img/tel.svg");
+}
+
+.form-footer {
+	margin-top: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.form-footer__img {
+	margin-right: 10px;
+	flex: none;
+}
+
+.form-footer__text {
+	color: #000000;
+	font-size: 15px;
+	line-height: 1.1;
+}
+
 .name-pack img{
+	display: inline-block;
 	@include r(1219){
 		width: 173px;
 	}
@@ -432,10 +504,11 @@ svg {
 		position: absolute;
 		background: url(../img/cont-wawe.png) no-repeat center;
 		left: -140px;
-		top: -60px;
+		top: 50%;
 		width: 297px;
 		height: 692px;
 		z-index: -1;
+		transform: translateY(-50%);
 		@include r(1023) {
 			display: none;
 		}
@@ -445,13 +518,14 @@ svg {
 		position: absolute;
 		background: url(../img/cont-wawe.png) no-repeat center;
 		right: -140px;
-		top: -60px;
+		top: 50%;
 		width: 297px;
 		height: 692px;
 		z-index: -1;
-		transform: scaleX(-1);
+		transform: translateY(-50%) scaleX(-1);
 		@include r(1023) {
 			display: none;
 		}
 	}
 }
+

@@ -1,5 +1,5 @@
 
-//=include ../components/footer/footer.js
+//=include ../components/home/home.js
 
 (function ($) {
 	$(window).on("load", function () {
@@ -36,8 +36,8 @@ $(".reviews-content").slick({
 				initialSlide: 1
 			} 
 	},
-    {
-      breakpoint: 1024,
+		{
+			breakpoint: 1024,
       settings: {
         slidesToShow: 2,
 				slidesToScroll: 1,
