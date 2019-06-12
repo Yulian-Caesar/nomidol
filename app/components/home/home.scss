@@ -309,6 +309,8 @@
   }
 	.home__form {
 		margin-bottom: 3px;
+		position: relative;
+		z-index: 10;
   }
   .header {
     margin-bottom: 10px;
@@ -328,7 +330,8 @@
 
   .home-wrap {
     flex-wrap: wrap;
-    align-items: center;
+		align-items: center;
+		justify-content: center;
   }
 
   .home-title {
@@ -345,12 +348,12 @@
   }
 
   .home-product {
-    width: 280px;
+   
     flex: none;
     position: relative;
     left: inherit;
     bottom: inherit;
-    margin: 0 auto;
+		margin-right: 25px;
   }
 
 }
@@ -430,7 +433,9 @@
 		margin: 0 auto;
 		margin-bottom: 4px;
   }
-
+	.home-product{
+		width: 280px;
+	}
 }
 
 

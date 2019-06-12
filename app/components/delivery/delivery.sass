@@ -1,7 +1,25 @@
 .delivery
-	padding: 75px 0 20px
+	padding: 100px 0 20px
+	position: relative
 	+r(1219)
-		padding: 50px 0 30px
+		padding: 80px 0 30px
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		left: 50%
+		transform: translateX(-50%)
+		background: url(../img/rev-line.svg) no-repeat center
+		width: 1171px
+		height: 31px
+		+r(1219)
+			background-size: 100%
+			width: 971px
+		+r(1023)
+			background: none
+			width: 100%
+			height: 1px
+			border-bottom: 1px solid rgba(0,0,0,0.1)
 	&-content
 		counter-reset: use-counter
 		display: flex
@@ -14,7 +32,7 @@
 		+r(1023)
 			margin-top: 20px
 			background: none
-		+r(639)
+		+r(767)
 			flex-wrap: wrap
 	&-box
 		width: 320px
@@ -22,7 +40,7 @@
 			width: 280px
 		+r(1023)
 			width: 240px
-		+r(639)
+		+r(767)
 			width: 220px
 			margin-bottom: 30px
 			&:last-child
@@ -36,7 +54,7 @@
 			+r(1023)
 				margin-top: 0
 				margin: 0 10px
-			+r(639)
+			+r(767)
 				margin-bottom: 30px
 		&__img
 			position: relative
@@ -124,3 +142,26 @@
 			+r(1023)
 				font-size: 16px
 				margin-top: 3px
+
+@media (max-width: 767px) and (min-width: 480px)
+	.delivery-box
+		display: flex
+		width: 100%
+		align-items: center
+	.delivery-box__img
+		flex-shrink: 0
+		margin-right: 0
+		margin-left: 0
+		width: auto
+	.delivery-box:nth-child(2)
+		margin: 0
+	.delivery-box:nth-child(2)
+		margin-bottom: 30px
+	.delivery-box__title
+		text-align: left
+		margin-top: 0
+	.delivery-box__text
+		text-align: left
+	.delivery-box__title:before
+		left: 0
+		transform: none

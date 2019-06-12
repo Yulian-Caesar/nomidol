@@ -1,46 +1,29 @@
 
 .reviews
-	padding: 50px 0 80px
-	position: relative
+	padding: 50px 0 50px
 	+r(1219)
-		padding-bottom: 60px
-	&:before
-		content: ''
-		position: absolute
-		bottom: 0
-		left: 50%
-		transform: translateX(-50%)
-		background: url(../img/rev-line.svg) no-repeat center
-		width: 1171px
-		height: 31px
-		+r(1219)
-			background-size: 100%
-			width: 971px
-		+r(1023)
-			background: none
-			width: 100%
-			height: 1px
-			border-bottom: 1px solid rgba(0,0,0,0.1)
+		padding-bottom: 40px
 	&-content
 		margin-top: 50px
-		+r(1300)
-			max-width: 1006px
+		+r(1219)
+			margin-top: 20px
+		+r(1023)
+			padding-top: 33px
+			margin-top: 0
+		+r(639)
+			max-width: 370px
+			display: block
 			margin-right: auto
 			margin-left: auto
-		+r(1219)
-			max-width: 900px
-			margin-top: 20px
+			padding-top: 0
+			margin-top: 15px
 	&-box
 		border-radius: 5px
 		background-color: #fef7f2
 		padding: 30px 30px 35px 30px
 		position: relative
-		width: 370px
 		z-index: 0
-		+r(1300)
-			width: 320px
 		+r(1219)
-			width: 285px
 			padding: 20px 20px 25px 20px
 		&:before
 			content: ''
@@ -50,13 +33,27 @@
 			background: url(../img/mark.png) no-repeat center
 			width: 27px
 			height: 26px
+		&__img
+			flex-shrink: 0
+			+r(1219)
+				width: 80px
+				height: 80px
+			+r(1023)
+				width: 90px
+				height: 90px
 		&-top
 			display: flex
 			align-items: center
+			+r(639)
+				flex-direction: column
 		&-user
 			margin-left: 18px
 			+r(1219)
 				margin-left: 10px
+			+r(639)
+				margin-left: 0
+				text-align: center
+				margin-top: 4px
 		&__name
 			color: #000000
 			font-size: 22px
@@ -80,7 +77,7 @@
 			font-size: 18px
 			font-weight: 400
 			line-height: 28px
-			max-height: 168px
+			max-height: 220px
 			overflow: hidden
 			+r(1300)
 				br
@@ -89,6 +86,11 @@
 				margin-top: 10px
 				line-height: 24px
 				max-height: 191px
+			+r(639)
+				font-size: 17px
+			+r(479)
+				max-height: 100%
+				ine-height: normal
 		&__btn
 			position: absolute
 			bottom: -15px
@@ -98,6 +100,8 @@
 			+r(1023)
 				left: 50%
 				transform: translateX(-50%)
+			+r(479)
+				display: none
 		&__plus
 			position: relative
 			background-color: #93b02e
@@ -137,25 +141,27 @@
 		text-align: center
 		margin-top: 70px
 		+r(1219)
-			margin-top: 50px
+			margin-top: 60px
 		+r(1023)
-			margin-top: 40px
+			margin-top: 20px
 			font-size: 17px
+		+r(639)
+			margin-top: 10px
 
-.slick-center
-	.reviews-box__text
-		max-height: 222px
-		+r(1219)
-			max-height: 264px
+
 
 .slick-arrow 
 	position: absolute
 	top: 195px
 	cursor: pointer
 	transition: .5s
+	+r(1219)
+		top: 155px
 	+r(1023)
-		top: auto
-		bottom: -30px
+		top: 0
+	+r(639)
+		bottom: auto
+		top: 54px
 .slider-box
 	position: relative
 .next 
@@ -165,25 +171,22 @@
 	+r(1350)
 		right: -60px
 	+r(1300)
-		right: 15px
+		right: -20px
 	+r(1219)
 		right: -17px
 	+r(1023)
 		right: 0
+	+r(639)
+		right: 50%
+		transform: translateX(260%)
 	&:hover
 		fill: #93b02e
 
-.slick-dots li.slick-active button
-	position: relative
-
-.slick-dots li.slick-active button:before
-	opacity: .75
-	color: #000
-	width: 18px
-	height: 18px
-	background-color: #e9862c
-	opacity: 1
-
+.slick-dots
+	left: 50%
+	transform: translate(-50%)
+	+r(1023)
+		bottom: -30px
 .slick-dots li button:before
 	width: 14px
 	height: 14px
@@ -194,25 +197,30 @@
 	position: absolute
 	top: 50%
 	left: 50%
-	transform: translate(-50%,-50%)
-
+	transform: translate(-50%, -50%)
 .slick-dots li button:hover:before
 	background-color: #eea868
-
-.slick-dots li.slick-active button:after 
-	content: ''
-	position: absolute
-	top: 1.5px
-	left: 50%
-	transform: translateX(-50%)
-	width: 0
-	height: 0
-	border-style: solid
-	border-width: 0 4.5px 5px
-	border-color: transparent transparent #e9862c
-	z-index: 20
-
-
+.slick-dots li.slick-active button:before
+	width: 17px
+	height: 17px
+	background-color: #e9862c
+	opacity: 1
+	border: 1px solid #e9862c
+.slick-dots li.slick-active button
+	position: relative
+	&:after
+		content: ''
+		position: absolute
+		top: -3.5px
+		left: 50%
+		transform: translateX(-50%)
+		width: 0
+		height: 0
+		border-style: solid
+		border-width: 0 4.5px 5px 4.5px
+		border-color: transparent transparent #e9862c transparent
+		+r(1219)
+			top: -3px
 .prev 
 	left: -80px
 	fill: #fdd5b7
@@ -220,11 +228,14 @@
 	+r(1350)
 		left: -60px
 	+r(1300)
-		left: 15px
+		left: -20px
 	+r(1219)
 		left: -17px
 	+r(1023)
 		left: 0
+	+r(639)
+		left: 50%
+		transform: translateX(-260%)
 	&:hover
 		fill: #93b02e
 
@@ -233,22 +244,39 @@
 	transform: translate(-50%)
 	bottom: -52px
 	+r(1219)
-		bottom: -30px
+		bottom: -40px
 
 
 .slick-slide
 		margin: 9px 15px 17px
 		+r(1300)
 			margin: 9px 10px 17px
+		+r(479)
+			margin-bottom: 10px
 .slick-list
 		margin: 0 -15px
 		+r(1300)
+			margin: 0 25px
+		+r(1023)
 			margin: 0 -10px
+
 
 .content-plus .reviews-box__plus:after
 	opacity: 0
 
 .content-plus .reviews-box__text
 		max-height: 800px 
-.slick-dots li.slick-active button
-	height: 30px
+
+.plus-toggle
+	display: none
+	+r(1219)
+		display: block
+	+r(1023)
+		display: none
+	+r(767)
+		display: block
+	+r(639)
+		display: none
+	+r(479)
+		display: none
+

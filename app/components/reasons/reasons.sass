@@ -1,5 +1,5 @@
 .reasons
-	padding: 130px 0 30px
+	padding: 115px 0 30px
 	+r(1219px)
 		padding: 90px 0 25px
 	&-content
@@ -63,6 +63,8 @@
 			+r(1023)
 				font-size: 19px
 				line-height: normal
+				br
+					display: none
 			+r(767)
 				font-size: 18px
 				margin-top: 5px
@@ -82,16 +84,22 @@
 			line-height: 28px
 			text-align: center
 			margin-top: 7px
-			+r(1219px)
+			+r(1219)
 				margin-top: 4px
 				br
 					display: none
 			+r(1023)
 				font-size: 17px
 				line-height: normal
-				margin-top: 0
+				margin-top: 5px
+				max-width: 280px
+				margin: 0 auto
+				margin-top: 5px
+				br
+					display: none
 			+r(767)
 				font-size: 16px
+				margin-top: 3px
 	&-second
 		margin-top: 44px
 		display: flex
@@ -225,7 +233,7 @@
 				width: 210px
 				margin-right: 5px
 			+r(479)
-				width: 240px
+				width: 300px
 				margin-right: 0
 				margin-bottom: 10px
 			span
@@ -250,7 +258,7 @@
 				width: 210px
 				margin-left: 5px 
 			+r(479)
-				width: 240px
+				width: 300px
 				margin-left: 0px
 			.reasons-second__item
 				justify-content: flex-start
@@ -320,7 +328,7 @@
 		&:after
 			content: ''
 			width: 71px
-			height: 1px
+			height: 1.2px
 			background-color: rgba(0,0,0,.15)
 			position: absolute
 			top: 50%

@@ -27,7 +27,9 @@
 		+r(767)
 			width: 260px
 			&:not(:last-child)
-				margin: 0 5px 70px
+				margin: 0 5px 20px
+				+r(479)
+					margin-bottom: 80px
 		&:nth-child(2n+1)
 			margin-top: 30px
 			+r(1219)
@@ -97,3 +99,31 @@
 				margin-top: 0
 				br
 					display: none
+
+@media (max-width: 767px) and (min-width: 480px)
+	.comp-box
+		display: flex
+		align-items: center
+		width: 100%
+		padding: 10px 5px
+	.comp-box__img
+		margin-top: 0
+		flex-shrink: 0
+	.comp-content
+		margin-top: 20px
+	.comp-box__img img
+		width: 125px
+		height: 100%
+	.comp-box__img:before
+		width: 118px
+	.comp-box__title
+		margin-top: 0
+	.comp-box__title
+		text-align: left
+	.comp-box__sub
+		text-align: left
+	.body-txt
+		margin-left: 10px
+	.comp-box__title:before
+		left: 0
+		transform: none

@@ -9,10 +9,22 @@
 		+r(767)
 			flex-direction: column
 			align-items: center
+			position: relative
 	&-pack
 		position: relative
 		+r(767)
 			max-width: 250px
+			width: 250px
+			position: absolute
+			top: 88px
+			left: 50%
+			transform: translateX(-50%)
+		+r(639)
+			top: 80px
+		+r(479)
+			top: 76px
+		+r(404)
+			top: 103px
 		&:before
 			content: ''
 			position: absolute
@@ -68,6 +80,9 @@
 			text-align: left
 			+r(767)
 				text-align: center
+				padding-bottom: 340px
+			+r(639)
+				padding-bottom: 330px
 			span
 				img
 					+r(1219)

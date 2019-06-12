@@ -20,27 +20,10 @@ $(".reviews-content").slick({
   slidesToScroll: 1,
 	arrows: true,
 	dots: true,
-	centerMode: true,
-	variableWidth: true,
 	prevArrow: $('.prev'),
 	nextArrow: $('.next'),
   responsive: [
-		{
-			breakpoint: 1750,
-			settings: {
-				slidesToShow: 3,
-				centerMode: true,
-				initialSlide: 1
-			} 
-	},
-{
-			breakpoint: 1302,
-			settings: {
-				slidesToShow: 3,
-				centerMode: true,
-				initialSlide: 1
-			} 
-	},
+
 		{
 			breakpoint: 1024,
       settings: {
@@ -78,7 +61,8 @@ $(".reviews-content").slick({
 				slidesToScroll: 1,
 				centerMode: false,
 				variableWidth: false,
-				dots: false
+				dots: false,
+				adaptiveHeight: true
       }
     }
   ]

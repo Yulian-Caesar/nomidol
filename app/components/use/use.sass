@@ -19,8 +19,10 @@
 		+r(1023)
 			margin-top: 15px
 		+r(767)
-			flex-direction: column
+			display: flex
 			align-items: center
+		+r(639)
+			flex-direction: column
 	&-pack
 		margin-left: 65px
 		position: relative
@@ -30,6 +32,7 @@
 			width: 280px
 		+r(767)
 			width: 240px
+			flex-shrink: 0;
 		&:before
 			content: ''
 			position: absolute
@@ -64,9 +67,7 @@
 			margin-top: 15px
 			margin-left: 20px
 		+r(767)
-			margin-left: 0
-			display: flex
-			justify-content: space-between
+			margin-left: 15px
 		+r(639)
 			display: block
 		&-box
@@ -74,12 +75,12 @@
 			
 			&:not(:last-child)
 				margin-bottom: 25px
+				+r(767)
+					margin-bottom: 15px
 				+r(639)
 					margin-bottom: 15px
 			+r(767)
-				flex-direction: column
-				align-items: center
-				width: 32%
+		
 			+r(639)
 				flex-direction: row
 				align-items: flex-start
@@ -105,7 +106,7 @@
 				height: 12px
 				background-color: #f17e16
 				border-radius: 50%
-				+r(767)
+				+r(639)
 					display: none
 			&:after
 				content: ''
@@ -114,10 +115,10 @@
 				top: 50%
 				transform: translateY(-50%)
 				width: 143px
-				height: 1px
+				height: 1.4px
 				background-color: rgba(0,0,0,.1)
 				z-index: -1
-				+r(767)
+				+r(639)
 					display: none
 			img
 				border-radius: 50%
@@ -143,7 +144,6 @@
 			+r(1023)
 				margin-left: 10px
 			+r(767)
-				margin-left: 0
 			+r(639)
 				margin-left: 10px
 		&__number
@@ -157,8 +157,6 @@
 				margin-top: 2px
 			+r(767)
 				position: relative
-				margin-top: -20px
-				margin-left: 30px
 			+r(639)
 				margin-left: 0
 				margin-top: 0
@@ -175,7 +173,6 @@
 				line-height: normal
 				margin-top: 4px
 			+r(767)
-				text-align: center
 				font-size: 16px
 				br
 					display: none
@@ -187,3 +184,4 @@
 			top: 96px
 			+r(1023)
 				display: none
+

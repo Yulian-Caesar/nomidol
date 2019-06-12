@@ -535,4 +535,14 @@ br{
 	.slick-dots li.slick-active button{
 		height: 30px !important;
 	}
+	.slick-dots li.slick-active button::after{
+		top: 1.5px !important;
+		transform: translateX(-45.9%) !important;
+	}
+	.home  .button{
+		padding-top: 19px !important;
+	}
+	.last-section .button, .popup-wrap .button{
+		padding-top: 9px !important;
+	}
 }
